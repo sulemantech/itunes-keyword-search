@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ITunesSearchComponent } from './i-tunes-search/i-tunes-search.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ITunesSearchComponent
   ],
   imports: [
     BrowserModule,
