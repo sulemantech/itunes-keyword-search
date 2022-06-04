@@ -1,1 +1,38 @@
-<p>i-tunes-search works!</p>
+<div class="container">
+   
+  
+<div class="form-group">
+    <br><br>
+    <h3 for="userName">iTunes Search Item</h3>
+    <input type="text" class="form-control" name="term" [(ngModel)]="term">
+  </div>
+  <div class="text-center">
+    <p class="lead" *ngIf="loading">Loading...</p>
+  </div>
+  <br>
+  <div class="form-group">
+    <button class="btn btn-primary" type="button" (click)="search()">Search</button>
+  </div>
+<br>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+  <ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let track of results">
+      <img style=" width: 60px;height: 60px;object-fit: cover" src="{{track.artworkUrl60}}">
+      <a style="font-weight:600;margin-left:10px" target="_blank"
+         href="{{track.collectionViewUrl}}">{{ track.collectionCensoredName }}
+      </a>
+    </li>
+  </ul>
+  
+</div>
+
+ 
