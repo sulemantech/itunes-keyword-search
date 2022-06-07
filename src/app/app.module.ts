@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { ITunesSearchComponent } from './i-tunes-search/i-tunes-search.component';
 import { FormsModule } from '@angular/forms';
+import { ITunesItemDetailComponent } from './i-tunes-item-detail/i-tunes-item-detail.component';
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ITunesSearchComponent
+    ITunesSearchComponent,
+    ITunesItemDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
