@@ -4,9 +4,10 @@ import { ITunesItemDetailComponent } from './i-tunes-item-detail/i-tunes-item-de
 import { ITunesSearchComponent } from './i-tunes-search/i-tunes-search.component';
 
 const routes: Routes = [
-  { path: 'detail', component: ITunesItemDetailComponent },
+  { path: '', component: ITunesSearchComponent },
+  { path: 'detail/:term/:index', component: ITunesItemDetailComponent },
   { path: 'second-component', component: ITunesSearchComponent },
-];;
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
