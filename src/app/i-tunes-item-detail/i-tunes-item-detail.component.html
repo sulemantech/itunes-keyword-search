@@ -1,8 +1,50 @@
 <div class="container">
-<p>iTunes Item Details</p>
-<p>{{termObj.artistName}}</p>
+    <br>
+<h2>iTunes Item Details</h2>
+<style>
+    .product-page-header .album-header-metadata .product-meta {
+    margin-top: 4px;
+    color: var(--systemSecondary);
+    text-transform: uppercase;
+    display: inline;
+}
+.typography-callout-emphasized {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+</style>
+<!--<p>{{termObj.artistName}}</p>
 <img src="{{termObj.artworkUrl100}}" width="200px" height="200px">
 <p>{{termObj.collectionCensoredName}}</p>
 <p>{{termObj.collectionName}}</p>
-<p>{{termObj.collectionPrice}}</p>
+<p>{{termObj.collectionPrice}}</p>-->
+<div class="row">
+    <div class="col-4"><img height="350" width="350" src="{{termObj.artworkUrl100}}"></div>
+    <div class="col-6">
+        <h1 style="font-size: 26px;
+        line-height: 1.23077;
+        font-weight: 600;
+        
+        letter-spacing: 0;">{{termObj.collectionCensoredName}}
+        </h1>
+        <h4 style="font-size: 20px;
+        line-height: 1.23077;
+        color:red;
+        font-weight: 600;
+        letter-spacing: 0;">{{termObj.artistName}}
+        </h4>
+        <p style="margin-top: 4px;
+        color: var(--systemSecondary);
+        text-transform: uppercase;
+        display: inline;
+        font-size: 12px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: 0;" class="product-meta typography-callout-emphasized">{{termObj.collectionName}}</p>
+    </div>
+        <div class="col"></div>
+    
+</div>
 </div>

@@ -8,12 +8,18 @@ import { ITunesSearchComponent } from './i-tunes-search/i-tunes-search.component
 import { FormsModule } from '@angular/forms';
 import { ITunesItemDetailComponent } from './i-tunes-item-detail/i-tunes-item-detail.component';
 import { DataTablesModule } from "angular-datatables";
+import { PageOneComponent } from './page-one/page-one.component';
+import { PageTwoComponent } from './page-two/page-two.component';
+import { PageThreeComponent } from './page-three/page-three.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ITunesSearchComponent,
-    ITunesItemDetailComponent
+    ITunesItemDetailComponent,
+    PageOneComponent,
+    PageTwoComponent,
+    PageThreeComponent
   ],
   imports: [
     BrowserModule,

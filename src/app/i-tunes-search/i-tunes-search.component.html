@@ -1,4 +1,13 @@
 <div class="container">
+  <ul>
+    <li><a routerLink="/a">a</a></li>
+    <li><a routerLink="/b">b</a></li>
+    <li><a routerLink="/c">c</a></li>
+
+    <li>
+        <button (click)="navigation.goBack()">Back to {{navigation.getPreviousUrl()}} </button>
+    </li>
+</ul>
     <div class="form-group">
         <br><br>
         <h3 for="userName">iTunes Search Item</h3>

@@ -3,6 +3,7 @@ import { Subject } from 'rxjs';
 import { ITunesSearchService } from '../i-tunes-search.service';
 import { ResultsEntity } from '../itunes';
 import { SearchItem } from '../SearchItem';
+import { NavigationService } from '../navigation.service';
 
 @Component({
   selector: 'app-i-tunes-search',
@@ -15,7 +16,9 @@ export class ITunesSearchComponent implements OnInit {
   results:any[] = [];
   loading:boolean = false;
   term: string = "best"
-  constructor(private iTunesService:ITunesSearchService) { 
+  constructor(private iTunesService:ITunesSearchService,
+    public navigation: NavigationService) { 
+      this.navigation.startSaveHistory();
     this.results = [];
     this.loading = false;
   }

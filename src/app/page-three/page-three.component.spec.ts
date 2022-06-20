@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ITunesItemDetailComponent } from './i-tunes-item-detail.component';
+import { PageThreeComponent } from './page-three.component';
 
-describe('ITunesItemDetailComponent', () => {
-  let component: ITunesItemDetailComponent;
-  let fixture: ComponentFixture<ITunesItemDetailComponent>;
+describe('PageThreeComponent', () => {
+  let component: PageThreeComponent;
+  let fixture: ComponentFixture<PageThreeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ITunesItemDetailComponent ]
+      declarations: [ PageThreeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ITunesItemDetailComponent);
+    fixture = TestBed.createComponent(PageThreeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
