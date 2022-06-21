@@ -4,6 +4,8 @@ import { ITunesSearchService } from '../i-tunes-search.service';
 import { ResultsEntity } from '../itunes';
 import { SearchItem } from '../SearchItem';
 import { NavigationService } from '../navigation.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-i-tunes-search',
@@ -17,8 +19,16 @@ export class ITunesSearchComponent implements OnInit {
   loading:boolean = false;
   term: string = "best"
   constructor(private iTunesService:ITunesSearchService,
-    public navigation: NavigationService) { 
+    public navigation: NavigationService, private activeRoute: ActivatedRoute,
+    private location:Location) { 
       this.navigation.startSaveHistory();
+      this.term = this.activeRoute.snapshot.params['term'];
+      this.iTunesService.search(this.term).subscribe((response)=>{
+        console.log(response);
+        this.results = response.results;
+        this.loading = false;
+        console.log(this.results);
+    });
     this.results = [];
     this.loading = false;
   }
@@ -54,10 +64,12 @@ export class ITunesSearchComponent implements OnInit {
       this.loading = false;
       console.log(this.results);
   });
+  this.location.replaceState("/home/"+this.term);
 }
 
   search2(item:string){
     this.iTunesService.search(item);
     console.log(this.results);
+
   }
 }

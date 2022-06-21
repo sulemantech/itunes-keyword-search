@@ -7,7 +7,9 @@ import { PageThreeComponent } from './page-three/page-three.component';
 import { PageTwoComponent } from './page-two/page-two.component';
 
 const routes: Routes = [
-  { path: '', component: ITunesSearchComponent },
+  {path: '', redirectTo: 'home/', pathMatch: 'full'},
+{path: 'home/:term', component: ITunesSearchComponent},
+  //{ path: '', component: ITunesSearchComponent },
   { path: 'detail/:term/:index', component: ITunesItemDetailComponent },
   { path: 'second-component', component: ITunesSearchComponent },
   {
